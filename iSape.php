@@ -2,88 +2,18 @@
 /*
 Plugin Name: iSape
 Version: 0.72 (02-05-2010)
-Plugin URI: http://itex.name/isape
-Description: SAPE.RU helper. Plugin iSape is meant for the sale of conventional and contextual links in <a href="http://www.sape.ru/r.a5a429f57e.php">Sape.ru</a> .
-Author: Itex
-Author URI: http://itex.name/
+Plugin URI: https://github.com/xezzus/sape-wp
+Description: Плагин для Wordpress, обеспечивает вывод ссылок от биржи ссылок Sape
+Author: xezzus
+Author URI: https://github.com/xezzus
 */
 
 /*
-Copyright 2007-2009  Itex (web : http://itex.name/)
+Copyright 2012  xezzus (web : https://github.com/xezzus)
 
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+This free.
 */
 
-/*
-
-EN
-Plugin iSape is meant for the sale of conventional and contextual links in Sape.ru.
-Features:
-Support for both conventional and contextual links.
-Placing links up to the text of page, after page of text in the widget and footer.
-Widget course customizable.
-Automatic installation of a plug and the rights to the sape folder on request.
-Adjustment of amount of displayed links depending on the location.
-
-Requirements:
-Wordpress 2.3-2.6.3
-PHP5, PHP4
-Widget compatible theme, to use the links in widgets.
-
-Installation:
-Copy the file iSape.php in wp-content/plugins .
-In Plugins activate iSape.
-In settings-> iSape enter your Sape Uid.
-If you want to create a Sape folder automatically, coinciding with your Sape Uid.
-Allow work Sape links, to specify how many references to the use of text after text, widget and footer.
-Allow Sape context.
-If you are adding content frequently , then content links of main page, tags and categories can return error.
-If you frequently add content, the content of the main links, tags, categories can fly out in error.
-For preventation of it switch on the option "Show context only on Pages and Posts".
-As required switch on Check - a verification code.
-For activating widget you shall go to a design-> widgets, activate the widget iSape and point its title.
-If define ('WPLANG', 'ru_RU'); in wp-config.php then russian language;
-
-RU
-Плагин iSape предназначен для продажи обычных и контекстных ссылок в Sape.ru
-Возможности:
-Поддержка как обычных, так и контекстных ссылок.
-Размещение ссылок до текста страницы, после текста страницы, в виджетах и футере.
-Виджет конечно настраиваемый.
-Автоматическая установка плагина и прав на папку сапы по желанию.
-Регулировка количества показываемых ссылок в зависимости от места расположения.
-
-Требования:
-Wordpress 2.3-2.6.1
-ПХП5, ПХП4
-Виджет совместимая тема, если использовать ссылки в ввиджетах.
-
-Установка:
-Скопировать файл iSape.php в wp-content/plugins/ вордпресса.
-В плагинах активировать iSape.
-В настройках->iSape ввести ваш Sape Uid.
-По желанию создать автоматом папку Сапы, совпадающей с вашим Sape Uid.
-Разрешить работу Sape links, указать сколько ссылок использовать до текста, после текста, в виджете и футере.
-Разрешить Sape context.
-Если часто добавляете контент, то контентные ссылки в главной,тегах,категориях могут вылетать в эррор.
-Для предотвращения включите опцию "Show context only on Pages and Posts".
-По мере надобности включить Check - проверочный код.
-Для активации виджета нужно зайти в дизайн->виджеты, активировать виджет iSape и указать его заголовок.
-Если define ('WPLANG', 'ru_RU'); в wp-config.php, то будет русский язык.
-
-*/
 class itex_sape
 {
 	var $version = '0.72';
