@@ -450,7 +450,7 @@ class itex_sape
 		
     
 		if (count($this->sidebar_links) > 0) {
-      $li = '<li>'.implode('<li></li>',$this->sidebar_links).'</li>';
+      if(is_array($this->sidebar_links)) $li = '<li>'.implode('<li></li>',$this->sidebar_links).'</li>';
       echo $before_widget.$before_title . $title . $after_title.  '<ul>'.$li.'</ul>'.$after_widget;
     }
 	}
