@@ -440,14 +440,6 @@ class itex_sape
 	{
 		extract($args, EXTR_SKIP);
 		$title = get_option("itex_s_widget_links_title");
-		//$title = empty($title) ? urlencode('<a href="http://itex.name" title="iSape">iSape</a>') :$title;
-		$itex = array('<a href="http://itex.name/isape" title="iSape">iSape</a>','<a href="http://itex.name/" title="itex">itex</a>');
-		if (empty($title)) 
-		{
-			$title = $itex[rand(0,count($itex)-1)];
-			update_option("itex_s_widget_links_title", $title);
-		}
-		
     
 		if (count($this->sidebar_links) > 0) {
       if(is_array($this->sidebar_links)) $li = '<li>'.implode('<li></li>',$this->sidebar_links).'</li>';
@@ -463,8 +455,6 @@ class itex_sape
 	function itex_s_widget_links_control()
 	{
 		$title = get_option("itex_s_widget_links_title");
-		$itex = array('<a href="http://itex.name/isape" title="iSape">iSape</a>','<a href="http://itex.name/" title="itex">itex</a>');
-		$title = empty($title) ? $itex[rand(0,count($itex)-1)] :$title;
 		if ($_POST['itex_s_widget_links_Submit'])
 		{
 			//$title = htmlspecialchars($_POST['itex_s_widget_title']);
@@ -536,9 +526,6 @@ class itex_sape
 				<input type='submit' name='info_update' value='<?php echo __('Save Changes', 'iSape'); ?>' />
 			</p>
 			        		
-			<p align="center">
-				<?php echo __("Powered by ",'iSape')."<a href='http://itex.name/isape' title='iTex iSape'>iTex iSape</a> ".__("Version:",'iSape').$this->version; ?>
-			</p>				
 			</form>
 		
 		</div>
@@ -1039,17 +1026,6 @@ class itex_sape
 						echo "<br/>\n";
 						
 						?>
-					</td>
-				</tr>
-				
-				
-				<tr>
-					<th width="30%" valign="top" style="padding-top: 10px;">
-						<label for=""></label>
-					</th>
-					<td align="center">
-						<br/><br/>
-						<a target="_blank" href="http://itex.name/go.php?http://www.sape.ru/r.a5a429f57e.php"><img src="http://img.sape.ru/bn/sape_001.gif" alt="www.sape.ru!" border="0" /></a>
 					</td>
 				</tr>
 			</table>
